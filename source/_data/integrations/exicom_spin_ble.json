@@ -11,8 +11,14 @@
   "categories": [
     "energy.ev_charging"
   ],
+  "connectivity": [
+    "bluetooth"
+  ],
   "platforms": [
-    "sensor"
+    "binary_sensor",
+    "diagnostics",
+    "sensor",
+    "switch"
   ],
   "discovery": [
     "bluetooth"
