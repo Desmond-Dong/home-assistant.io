@@ -77,6 +77,7 @@ Enjoy the (beta) release!
 - [Welcome to the Marketplace](#welcome-to-the-marketplace)
   - [Browse and install](#browse-and-install)
   - [Custom repositories](#custom-repositories)
+  - [Where your downloads come from](#where-your-downloads-come-from)
   - [Thank you, HACS](#thank-you-hacs)
 - [Exclude items from a target](#exclude-items-from-a-target)
 - [Copy and paste dashboard sections](#copy-and-paste-dashboard-sections)
@@ -161,6 +162,14 @@ Not every project is in the catalog. To add one that is missing, select **Add fr
 The **Custom repositories** page lists repositories you added this way and lets you open or remove them. A repository stays in the list until you uninstall it.
 
 Custom repositories require a GitHub connection. The Marketplace uses GitHub device sign-in, so you approve the connection on GitHub without entering your password in Home Assistant. The connection only reads public information and cannot access private repositories.
+
+### Where your downloads come from
+
+By default, the Marketplace gets its catalog and everything you install from GitHub. Where GitHub cannot be reached, such as in mainland China, you can switch to the mirrors run by the Home Assistant China community. Go to **Settings** > **Marketplace**, select the three dots {% icon "mdi:dots-vertical" %} menu in the upper-right corner, and select **Download source**. If the Marketplace cannot reach the catalog and a mirror is available for your country, a repair suggests it.
+
+Everything the Marketplace downloads then goes through whoever runs that mirror, so pick a source you trust. If you used the Chinese version of HACS, the Marketplace selects these mirrors for you when it migrates.
+
+Thanks, [@frenck]!
 
 ### Thank you, HACS
 
@@ -429,7 +438,7 @@ We welcome the following new integrations in this release:
   Bring the vehicles in your A Better Routeplanner (ABRP) account into Home Assistant. Each vehicle gets sensors for its state of charge, range, battery temperature, odometer, and charging state. Sign in with your ABRP account.
 
 - **[aerosmart]**, added by [@kayloehmann]  
-  Monitor an aerosmart ventilation and heat-pump installation over Modbus, through a TCP gateway or a serial connection. No vendor app or cloud service is needed. Home Assistant reads operating values, filter information, and controller status. <!-- TODO: docs not merged yet, see home-assistant.io#49199 -->
+  Monitor an aerosmart ventilation and heat-pump installation over Modbus, through a TCP gateway or a serial connection. No vendor app or cloud service is needed. Home Assistant reads operating values, filter information, and controller status.
 
 - **[Alpha Bidet Infrared]**, added by [@eseverson]  
   Control an Alpha Bidet bidet seat with an infrared transmitter already set up in Home Assistant. Start or stop a wash, run the dryer, and set water pressure, nozzle position, and temperatures. Infrared is one-way, so the integration cannot confirm the bidet's state.
@@ -456,13 +465,13 @@ We welcome the following new integrations in this release:
   Track electricity and gas prices for your [ENGIE Belgium](https://www.engie.be) contracts. With a dynamic tariff, you also get Belgian EPEX day-ahead wholesale prices to help you choose when to run appliances.
 
 - **[Flic Button]**, added by [@alhia] and [@joostlek]  
-  Pair Flic 2, Flic Duo, and Flic Twist buttons with Home Assistant directly over Bluetooth, without an account. Each press shows up as an event you can use in {% term automations %}. The Flic Twist also reports how far it is turned. <!-- TODO: docs not merged yet, see home-assistant.io#44011 -->
+  Pair Flic 2, Flic Duo, and Flic Twist buttons with Home Assistant directly over Bluetooth, without an account. Each press shows up as an event you can use in {% term automations %}. The Flic Twist also reports how far it is turned.
 
 - **[Foreca]**, added by [@EetuPelkonen]  
   Get weather forecasts for locations worldwide from [Foreca](https://business.foreca.com). For noncommercial use, you can use a free Foreca Weather API Freemium key or one of its premium packages.
 
 - **[Grandstream Home]**, added by [@wtxu-gs]  
-  Monitor Grandstream GDS372x and GSC356X door access systems from Home Assistant. Home Assistant discovers them on your local network. <!-- TODO: docs not merged yet, see home-assistant.io#44819 -->
+  Monitor Grandstream GDS372x and GSC356X door access systems from Home Assistant. Home Assistant discovers them on your local network.
 
 - **[Hase iQ]**, added by [@bbayszczak]  
   Monitor the combustion phase, firebox temperature, heat-up progress, and combustion performance of a HASE wood stove with iQ monitoring. Home Assistant reads the stove over your local network, without the vendor app or a cloud service. You can get a {% term notification %} when it is time to add wood. The integration is read-only, so it cannot turn the stove on or off.
@@ -498,7 +507,7 @@ We welcome the following new integrations in this release:
   Search your pharmacy's catalog and order medication for pickup using your [Mijn Farmad Apotheek](https://procura.farmad.be/) account. The service is used by more than 1,000 pharmacies in Flanders. The integration provides two {% term actions %}: search and order.
 
 - **[Nature Remo]**, added by [@tnj]  
-  Connect [Nature](https://nature.global/) Remo smart remote controllers through the Nature cloud. Each Remo reports the temperature and humidity of its room. A Remo E also reports energy imported from and exported to the grid for the [Energy dashboard](/docs/energy/). <!-- TODO: docs not merged yet, see home-assistant.io#47190 -->
+  Connect [Nature](https://nature.global/) Remo smart remote controllers through the Nature cloud. Each Remo reports the temperature and humidity of its room. A Remo E also reports energy imported from and exported to the grid for the [Energy dashboard](/docs/energy/).
 
 - **[OKOK Scale]**, added by [@rrooggiieerr], launching at 🏆 platinum quality  
   Connect a Bluetooth scale that works with the [OKOK·International](https://okokapp.com/) app. Chart your weight on a dashboard and use each new measurement in {% term automations %}. The integration does not depend on the OKOK cloud app.
@@ -513,7 +522,7 @@ We welcome the following new integrations in this release:
   Connect your own [Seafile](https://www.seafile.com/) file sync and share server. See the size, number of files, and last change of the libraries you pick, and store your {% term backups %} on the server.
 
 - **[SenseCAP]**, added by [@balloob]  
-  Add supported [Seeed Studio SenseCAP](https://www.seeedstudio.com/SenseCAP-c-1825.html) sensors from your LoRaWAN connections. Depending on the model, Home Assistant provides temperature, humidity, illuminance, carbon dioxide, soil, and weather readings, plus battery level. <!-- TODO: docs not merged yet, see home-assistant.io#49207 -->
+  Add supported [Seeed Studio SenseCAP](https://www.seeedstudio.com/SenseCAP-c-1825.html) sensors from your LoRaWAN connections. Depending on the model, Home Assistant provides temperature, humidity, illuminance, carbon dioxide, soil, and weather readings, plus battery level.
 
 - **[SilverCrest Infrared]**, added by [@tr4nt0r]  
   Control SilverCrest fans and air coolers with an infrared emitter already set up in Home Assistant. Turn a device on or off and set its other functions. Infrared is one-way, so the integration cannot confirm the device's state.
@@ -888,6 +897,13 @@ There is even more packed into this release. Here are some of the other changes 
 - **Expose many entities at once.** Select the entities you want in the table under {% my entities title="**Settings** > **Devices & services** > **Entities**" %}, then choose **Expose to voice assistant**, or **Stop exposing to voice assistant**, from the selection menu. Looking each one up separately in the expose dialog is no longer needed. Thanks, [@jpbede]!
 - **Switch to YAML with the keyboard.** Press Ctrl + Shift + Y, or Cmd + Shift + Y on a Mac, to move between the visual editor and the {% term YAML %} editor. It works in the automation, script, and scene editors, in card and dashboard editors, and in **Tools** > **Actions**. You can find it in the keyboard shortcuts dialog, under **Other**. Thanks, [@Jump-333]!
 - **Drag picture elements into place.** In the Picture elements card editor, select an element in the preview and drag it where you want it, instead of working out its coordinates. Thanks, [@RaHehl]!
+- **Fire on anything but one state.** In the [state trigger](/triggers/state/), **From** and **To** gained an **Is not** option, so an {% term automation %} can start when an {% term entity %} changes to any state except the one you pick. Thanks, [@Skaronator]!
+- **Clear out several rows at once.** The tables for tags, labels, dashboards, and blueprints gained a selection mode: tick the rows you no longer need and delete them in one go. The Marketplace has it too, for uninstalling. Thanks, [@DaanVervacke]!
+- **Easier to use without a mouse.** Data tables can now be operated with the keyboard and read by a screen reader, icon-only badges and tile icons have accessible names, and the thermostat card is labeled for screen readers. Thanks, [@wendevlin], [@timmo001], and [@karwosts]!
+- **Choose which clients may connect over HTTPS.** The [HTTP](/integrations/http/) integration lets you pick a <abbr title="Transport Layer Security">TLS</abbr> profile. **Intermediate v6** is the new default and works with almost every browser, app, and device, while **Modern v6** accepts TLS 1.3 only. If your installation still uses an older profile, a repair offers the current one. Thanks, [@Markus98]!
+- **See what is coming up.** Selecting a calendar {% term entity %} now lists its upcoming events, instead of only the one in progress. Thanks, [@elupus]!
+- **More on your energy dashboard.** You can add your home's total consumption to the dashboard, and the graphs show power next to energy. Thanks, [@Jump-333] and [@MindFreeze]!
+- **Follow your Thread and Matter networks.** Thread network information moved to a page of its own, and the Matter network map now also shows the {% term devices %} that reach Home Assistant through a bridge. Thanks, [@ovflowd] and [@mib1185]!
 
 ### Your AI assistant can help troubleshoot
 
@@ -900,6 +916,10 @@ The [KNX](/integrations/knx/) integration brings an LLM API of its own, with too
 Thanks, [@balloob], [@allenporter], and [@martinhoefling]!
 
 [@martinhoefling]: https://github.com/martinhoefling
+[@karwosts]: https://github.com/karwosts
+[@Markus98]: https://github.com/Markus98
+[@mib1185]: https://github.com/mib1185
+[@ovflowd]: https://github.com/ovflowd
 
 ## Need help? Join the community
 
